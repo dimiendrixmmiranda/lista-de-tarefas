@@ -8,10 +8,21 @@ export default {
   ],
   theme: {
     extend: {
+      // bg-tarefas
+      backgroundImage: {
+        'img-tarefas': "url('/imagens/background.png')"
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        sm:'425px',
+        md:'768px',
+        lg:'1024px',
+        xl:'1280px',
+        '2xl':'1440px',
+      }
     },
   },
   plugins: [],
