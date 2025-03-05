@@ -51,6 +51,14 @@ body {
   gap: .7em;
 }
 
+/* Estilo Calendario */
+.react-calendar{
+  background-color: red;
+  width: 900px!important;
+}
+
+
+
 @media screen and (min-width: 1280px) {
   .subcontainer{
     display: grid;
