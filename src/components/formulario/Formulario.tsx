@@ -29,7 +29,7 @@ export default function Formulario({ inputTexto, setInputTexto, inputData, setIn
                 value={inputData}
                 onChange={(e) => setInputData(e.target.value)}
             />
-            <button className="w-full h-full bg-[--vermelho] text-white rounded-e-lg flex justify-center items-center text-2xl row-start-1 row-end-3 col-start-2 col-end-3" onClick={() => adicionarTarefa()}><CgMathPlus /></button>
+            <button className="w-full h-full bg-[--azul-escuro] text-white rounded-e-lg flex justify-center items-center text-2xl row-start-1 row-end-3 col-start-2 col-end-3" onClick={() => adicionarTarefa()}><CgMathPlus /></button>
         </div>
     )
 }

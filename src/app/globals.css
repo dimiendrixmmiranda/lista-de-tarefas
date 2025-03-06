@@ -8,13 +8,9 @@
   --background: #ffffff;
   --foreground: #171717;
   --preto: #000000;
-  --vermelho-escuro: #A80F13;
+  --azul-claro: #00ADFF;
+  --azul-escuro: #040238;
   --vermelho: #F80000;
-  --bege: #FBBB95;
-  --branco: #E9E3D7;
-  --roxo: #422d8b;
-  --fonte-primaria: "Roboto", serif;
-  --fonte-secundaria: "Montserrat", serif;
 }
 
 
@@ -31,7 +27,7 @@ body {
   font-family: var(--fonte-primaria)
 }
 
-.checkConcluido{
+.checkConcluido {
   appearance: none;
   width: 30px;
   height: 30px;
@@ -41,18 +37,86 @@ body {
   cursor: pointer;
 }
 
-.checkConcluido:checked{
+.checkConcluido:checked {
   background-color: rgb(157, 240, 157);
 }
 
-.subcontainer{
+.subcontainer {
   display: flex;
   flex-direction: column;
   gap: .7em;
 }
 
 /* Estilo Calendario */
-.react-calendar{
+.react-calendar {
   background-color: red;
-  width: 900px!important;
+  width: 900px !important;
+}
+
+.fc-toolbar-title {
+  text-transform: capitalize;
+}
+
+.fc-header-toolbar {
+  display: grid !important;
+  grid-template-columns: 1fr 95px;
+}
+
+.fc-header-toolbar .fc-toolbar-chunk:nth-child(3) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex !important;
+  flex-direction: column;
+}
+
+.fc-header-toolbar .fc-toolbar-chunk:nth-child(3) .fc-button-group {
+  margin: 0;
+}
+
+.fc-daygrid-day-frame {
+  cursor: pointer;
+}
+
+.fc-daygrid-day-events {
+  display: none !important;
+}
+
+.fc-daygrid-day-frame:has(.fc-daygrid-day-events .fc-daygrid-event-harness) {
+  background-color: var(--azul-escuro);
+  color: white;
+}
+
+.fc-day-today {
+  background-color: orange !important;
+  color: white !important
+}
+
+/* estilo dialog */
+[data-pc-section="header"] {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+}
+
+[data-pc-section="header"] div:nth-child(2) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* fim estilo dialog */
+
+@media screen and (min-width: 768px) {
+  .fc-header-toolbar {
+    grid-template-columns: 1fr 150px;
+  }
+
+  .fc-header-toolbar .fc-toolbar-chunk:nth-child(3) {
+    flex-direction: row;
+  }
+
+  .fc-header-toolbar .fc-toolbar-chunk:nth-child(3) .fc-button-group {
+    margin-left: .5em;
+  }
 }

@@ -117,7 +117,7 @@ export default function Home() {
 	function excluirTarefasConcluidas() {
 		setVisibleConfirmacaoConcluidas(true)
 	}
-	
+
 
 	return (
 
@@ -131,7 +131,7 @@ export default function Home() {
 					adicionarTarefa={adicionarTarefa}
 				/>
 				<div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-4">
-					<div className="flex flex-col gap-3 rounded-lg mt-4 overflow-hidden bg-[--vermelho-escuro] text-white p-2 h-fit" style={{ boxShadow: '1px 1px 2px black' }}>
+					<div className="flex flex-col gap-3 rounded-lg mt-4 overflow-hidden bg-[--azul-escuro] text-white p-2 h-fit" style={{ boxShadow: '1px 1px 2px black' }}>
 						{
 							tarefasFiltradas.length <= 0 ? (
 								<div className="text-center text-2xl font-bold leading-7 py-2 xl:text-4xl xl:py-3">Nenhuma tarefa encontrada!</div>
@@ -193,9 +193,7 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-					<div className="p-4 text-black relative w-full h-full max-w-[600px] z-10">
-						<Calendario events={eventosCalendario}></Calendario>
-					</div>
+					<Calendario events={eventosCalendario}></Calendario>
 				</div>
 				<ConfirmacaoExcluirTarefa
 					visibleConfirmacao={visibleConfirmacao}
