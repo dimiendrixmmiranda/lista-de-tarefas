@@ -56,13 +56,3 @@ body {
   background-color: red;
   width: 900px!important;
 }
-
-
-
-@media screen and (min-width: 1280px) {
-  .subcontainer{
-    display: grid;
-    grid-template-columns: 240px 1fr 240px;
-    padding: .7em 0;
-  }
-}
